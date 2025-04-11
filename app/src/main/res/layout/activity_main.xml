@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/amphitryon"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/amphitryon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:hint="votre adresse mail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amphitryon" />
+
+    <EditText
+        android:id="@+id/editTextMdp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:hint="votre mot de passe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <Button
+        android:id="@+id/buttonValiderAuthentification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:paddingHorizontal="40dp"
+        android:text="valider"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonQuitterAuthentification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <Button
+        android:id="@+id/buttonQuitterAuthentification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="quitter"
+        android:textSize="25sp"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonValiderAuthentification"
+        app:layout_constraintTop_toTopOf="@+id/buttonValiderAuthentification"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
