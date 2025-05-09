@@ -18,11 +18,15 @@ import okhttp3.*;
 
 public class AfficherTablesActivity extends AppCompatActivity {
 
+    // Déclaration des composants d'interface
     private Button buttonChoisirDate, buttonAfficher, buttonRetour;
     private Spinner spinnerService;
     private ListView listViewTables;
 
+    // Client HTTP pour les requêtes serveur
     private OkHttpClient client = new OkHttpClient();
+
+    // Date sélectionnée dans le calendrier
     private String selectedDate;
 
     @Override
@@ -58,7 +62,7 @@ public class AfficherTablesActivity extends AppCompatActivity {
         // Bouton Retour
         buttonRetour.setOnClickListener(v -> finish());
     }
-
+    // Fonction pour ouvrir le calendrier
     private void openDatePicker() {
         MaterialDatePicker<Long> picker = MaterialDatePicker.Builder.datePicker()
                 .setTitleText("Choisir une date")

@@ -89,22 +89,17 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("Test",utilisateur.getString("nomUtilisateur") + " est  connecté");
                         if(utilisateur.getString("idRole").compareTo("1")==0) {
                             Intent intent = new Intent(MainActivity.this,GestionTableActivity.class);
-                            //intent.putExtra("etudiant", etudiant.toString());
                             startActivity(intent);
 
 
                         }
                         else if(utilisateur.getString("idRole").compareTo("2")==0) {
-                            //Intent intent = new Intent(MainActivity.this, MainChefSalleActivity.class);
-                            //intent.putExtra("etudiant", etudiant.toString());
-                           // startActivity(intent);
-
 
                         }
                     }
                     catch(JSONException e){
                         Log.d("Test", "respose error :" +Objects.requireNonNull(e.getMessage()));
-                        // Toast.makeText(MainActivity.this, "Erreur de connexion !!!! !", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "Erreur de connexion !!!! !", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Log.d("Test","Login ou mot de  passe non valide !");
