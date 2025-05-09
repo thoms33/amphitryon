@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         Request request = new Request.Builder()
+                // ⛔ Modifier cette URL si l’adresse IP ou le chemin serveur change
                 .url("http://10.100.0.6/~tguyot/amphitryon/ServiceController/authentification.php")
                 .post(formBody)
                 .build();
